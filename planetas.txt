@@ -1,0 +1,3 @@
+Mercurio:
+Max distancia da terra: 1.44959545135
+Min distancia da terra: 0.549023985863
