@@ -1,3 +1,20 @@
 Mercurio:
 Max distancia da terra: 1.44959545135
 Min distancia da terra: 0.549023985863
+
+Venus:
+Max distancia da terra: 1.71598541737
+Min distancia da terra: 0.288435250521
+
+Marte:
+Max distancia da terra: 2.58691477776
+Min distancia da terra: 0.534777700901
+
+Jupiter:
+Max distancia da terra: 6.39850759506
+    	      	
+
+
+    	      
+    	    
+    	    

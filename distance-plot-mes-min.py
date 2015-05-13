@@ -9,11 +9,11 @@ lDia = [] # Lista para guardar o dia.
 
 for x in range(0, 365) :
     dia = localtime + datetime.timedelta(x,0)
-    mercury = ephem.Mercury(dia)
-    lPos.append(mercury.earth_distance)
+    marte = ephem.Mars(dia)
+    lPos.append(marte.earth_distance)
     lDia.append(dia)
 
 diaMinI = lPos.index(min(lPos))
 
-print("Dia de distancia minima:{}" .format(lDia[diaMinI]))
+print("Marte Dia de distancia minima:{}" .format(lDia[diaMinI]))
 print "Min value element : ", min(lPos);

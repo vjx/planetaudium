@@ -2,7 +2,7 @@ import ephem
 import datetime
 import time
 
-localtime = datetime.datetime(2016,5,10) 
+localtime = datetime.datetime(2015,7,10) 
 
 lPos = [] # Lista para guardar a position.
 lhora = [] # Lista para guardar o dia.
@@ -13,8 +13,7 @@ for x in range(0, 172800) :
     lPos.append(marte.earth_distance)
     lhora.append(hora)
 
+horaMaxI = lPos.index(max(lPos))
 
-horaMinI = lPos.index(min(lPos))
-
-print("Marte hora de distancia minima:{}" .format(lhora[horaMinI]))
-print "Min value element : ", min(lPos);
+print("Mars hora de distancia maxima:{}" .format(lhora[horaMaxI]))
+print "Max value element : ", max(lPos);

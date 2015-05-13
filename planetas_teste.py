@@ -65,6 +65,12 @@ while True:
     send2pd("Marte Fase {};" .format(mars.phase))
     send2pd("Marte Velocidade {};" .format(marsSpeed))
 
+    send2pd("Jupiter Dist-terra {};" .format(jupiter.earth_distance))
+    send2pd("Jupiter Fase {};" .format(mars.phase))
+    send2pd("Jupiter Velocidade {};" .format(jupiSpeed))
+
+    
+
     print("Mercurio Dist-terra:{} Fase:{} Velocidade:{}" .format(mercury.earth_distance, mercury.phase, mercSpeed))
 
     print("Venus Dist-terra:{} Fase:{} Velocidade:{}" .format(venus.earth_distance, venus.phase, (ephem.separation(hpos(venus), hpos(venusp)))))
