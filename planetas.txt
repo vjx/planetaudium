@@ -12,7 +12,8 @@ Min distancia da terra: 0.534777700901
 
 Jupiter:
 Max distancia da terra: 6.39850759506
-    	      	
+Min distancia da terra: 4.43534946442
+    	      	    	      	
 
 
     	      

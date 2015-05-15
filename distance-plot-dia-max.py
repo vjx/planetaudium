@@ -1,11 +1,16 @@
+
+# find the day that a planet is the maximum distance from earth
+# arguments: planetname date
+# example Jupiter 2015-05-22
+
 import ephem
 import datetime
 import time
 import sys
 
-planetaSet = sys.argv[1] # Get planet name
+planetaSet = sys.argv[1] # Get planet name, first argument
 
-user_input = sys.argv[2] # Get date string
+user_input = sys.argv[2] # Get date string, secound argument
 
 year_month_day = user_input.split('-')  # Split it into [year, month, day]
 
