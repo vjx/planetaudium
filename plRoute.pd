@@ -1,0 +1,10 @@
+#N canvas 33 54 450 300 10;
+#X obj 88 97 route Dist-terra Fase Velocidade;
+#X obj 88 164 s \$1-Dist;
+#X obj 151 145 s \$1-Phase;
+#X obj 214 127 s \$1-Speed;
+#X obj 88 61 inlet;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 0 2 3 0;
+#X connect 4 0 0 0;

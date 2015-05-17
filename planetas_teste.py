@@ -78,6 +78,16 @@ while True:
     send2pd("Saturn Fase {};" .format(saturn.phase))
     send2pd("Saturn Velocidade {};" .format(satuSpeed))
 
+    send2pd("Uranus Dist-terra {};" .format(uranus.earth_distance))
+    send2pd("Uranus Fase {};" .format(uranus.phase))
+    send2pd("Uranus Velocidade {};" .format(uranSpeed))
+
+    send2pd("Neptune Dist-terra {};" .format(neptune.earth_distance))
+    send2pd("Neptune Fase {};" .format(neptune.phase))
+    send2pd("Neptune Velocidade {};" .format(neptSpeed))
+
+    
+
     # Print info to console:
 
     print("-----------------")
