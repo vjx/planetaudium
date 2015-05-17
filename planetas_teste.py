@@ -1,3 +1,7 @@
+# Get planet data and send to pd
+# by x - excalibas@gmail.com
+#
+ 
 import ephem
 import datetime
 import time
@@ -6,6 +10,7 @@ import os
 def send2pd(message=''):
     os.system("echo '" + message + "' | pdsend 3333")
     
+# Start the loop:
 while True:
 
     localtime = datetime.datetime.utcnow() # Get time, not shure it I need to
@@ -13,6 +18,7 @@ while True:
 
     def hpos(body): return body.hlon, body.hlat 
         
+    # Calculate data from all the planets:
 
     mercury = ephem.Mercury(localtime)
     mercuryp = ephem.Mercury(passado)
@@ -39,10 +45,7 @@ while True:
     pluto = ephem.Pluto(localtime)
     plutop = ephem.Pluto(passado)
 
-    print("-----------------")
-        
-    print(localtime)
-    print(passado)
+   # Calculate speed for all the planets:
 
     mercSpeed = repr(ephem.separation(hpos(mercury), hpos(mercuryp)))
     venuSpeed = repr(ephem.separation(hpos(venus), hpos(venusp)))
@@ -52,6 +55,8 @@ while True:
     uranSpeed = repr(ephem.separation(hpos(uranus), hpos(uranusp)))
     neptSpeed = repr(ephem.separation(hpos(neptune), hpos(neptunep)))
     plutSpeed = repr(ephem.separation(hpos(pluto), hpos(plutop)))
+
+    # Send data to pd:
     
     send2pd("Mercurio Dist-terra {};" .format(mercury.earth_distance))
     send2pd("Mercurio Fase {};" .format(mercury.phase))
@@ -66,10 +71,19 @@ while True:
     send2pd("Marte Velocidade {};" .format(marsSpeed))
 
     send2pd("Jupiter Dist-terra {};" .format(jupiter.earth_distance))
-    send2pd("Jupiter Fase {};" .format(mars.phase))
+    send2pd("Jupiter Fase {};" .format(jupiter.phase))
     send2pd("Jupiter Velocidade {};" .format(jupiSpeed))
 
-    
+    send2pd("Saturn Dist-terra {};" .format(saturn.earth_distance))
+    send2pd("Saturn Fase {};" .format(saturn.phase))
+    send2pd("Saturn Velocidade {};" .format(satuSpeed))
+
+    # Print info to console:
+
+    print("-----------------")
+        
+    print(localtime)
+    print(passado)
 
     print("Mercurio Dist-terra:{} Fase:{} Velocidade:{}" .format(mercury.earth_distance, mercury.phase, mercSpeed))
 
@@ -82,5 +96,5 @@ while True:
     print("Plutao Dist-terra:{} Fase:{} Velocidade:{}" .format(pluto.earth_distance, pluto.phase, (ephem.separation(hpos(pluto), hpos(plutop)))))
     
     time.sleep(1)
- 
+# End of loop 
 

@@ -25,6 +25,12 @@ Min distancia da terra: 18.951133728
 Neptuno:
 Max distancia da terra: 30.948759079
 Min distancia da terra: 28.9454593658
+
+Plutão:
+Max distancia da terra: 34.2313995361
+Min distancia da terra: 31.8875198364
+    	      	
+
     	
 
     	      	    	      	
