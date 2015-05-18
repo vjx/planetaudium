@@ -1,4 +1,4 @@
-#N canvas 270 114 630 485 10;
+#N canvas 268 114 630 485 10;
 #X floatatom 113 197 12 0 0 0 - - -, f 12;
 #X obj 54 187 mtof;
 #X obj 106 366 lop~ 1;
@@ -7,18 +7,28 @@
 #X floatatom 122 319 12 0 0 0 - - -, f 12;
 #X obj 54 159 + 51;
 #X obj 92 134 r Transpose;
-#N canvas 33 63 626 467 speed 0;
-#X obj 212 78 t b b;
-#X obj 212 54 metro 500;
-#X obj 217 19 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#N canvas 89 70 626 467 speed 1;
+#X obj 212 318 t b b;
+#X obj 212 294 metro 500;
+#X obj 217 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 280 13 * 1.67772e+07;
-#X obj 308 -19 r MasterSpeed;
-#X obj 93 -12 loadbang;
-#X obj 123 222 outlet Reset-phase;
-#X obj 267 221 outlet;
-#X obj 295 85 t f f;
-#X obj 280 -53 r \$1-Speed;
+#X obj 295 153 * 1.67772e+07;
+#X obj 370 121 r MasterSpeed;
+#X obj 93 128 loadbang;
+#X obj 123 362 outlet Reset-phase;
+#X obj 322 359 outlet;
+#X obj 295 225 t f f;
+#X obj 295 87 r \$1-Speed;
+#X obj 419 340 pow;
+#X floatatom 441 234 5 0 0 0 - - -, f 5;
+#X obj 445 264 t b f;
+#X floatatom 421 399 12 0 0 0 - - -, f 12;
+#X obj 422 369 - 1;
+#X msg 411 303 1.2;
+#X obj 353 419 f;
+#X obj 353 441 print;
+#X obj 347 389 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X connect 0 0 6 0;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
@@ -26,8 +36,18 @@
 #X connect 4 0 3 1;
 #X connect 5 0 2 0;
 #X connect 8 0 1 1;
+#X connect 8 0 12 0;
 #X connect 8 1 7 0;
 #X connect 9 0 3 0;
+#X connect 10 0 14 0;
+#X connect 11 0 12 0;
+#X connect 12 0 15 0;
+#X connect 12 1 10 1;
+#X connect 14 0 13 0;
+#X connect 14 0 16 1;
+#X connect 15 0 10 0;
+#X connect 16 0 17 0;
+#X connect 18 0 16 0;
 #X restore 110 233 pd speed;
 #X obj 54 105 expr 1 - $f1;
 #X obj 362 36 switch~;
@@ -37,7 +57,7 @@
 #X obj 304 257 r Global-Kp-Cutoff;
 #X obj 262 154 atan;
 #X obj 484 258 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 12558 1;
+-1 -1 12629 1;
 #X obj 262 179 - 0.575;
 #X obj 101 259 f;
 #X obj 54 129 * 36;
