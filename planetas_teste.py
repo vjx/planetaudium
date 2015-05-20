@@ -102,8 +102,8 @@ while True:
     print("Jupiter Dist-terra:{} Fase:{} Velocidade:{}" .format(jupiter.earth_distance, jupiter.phase,  (ephem.separation(hpos(jupiter), hpos(jupiterp)))))
     print("Saturno Dist-terra:{} Fase:{} Velocidade:{}" .format(saturn.earth_distance, saturn.phase, (ephem.separation(hpos(saturn), hpos(saturnp)))))
     print("Urano Dist-terra:{} Fase:{} Velocidade:{}" .format(uranus.earth_distance, uranus.phase, (ephem.separation(hpos(uranus), hpos(uranusp)))))
-    print("Neptuno Dist-terra:{} Fase:{} Velocidade:{}" .format(neptune.earth_distance, neptune.phase, (ephem.separation(hpos(neptune), hpos(neptunep)))))
-    print("Plutao Dist-terra:{} Fase:{} Velocidade:{}" .format(pluto.earth_distance, pluto.phase, (ephem.separation(hpos(pluto), hpos(plutop)))))
+
+    print("Neptuno Dist-terra:{} Fase:{} Velocidade:{}" .format(neptune.earth_distance, neptune.phase, neptSpeed))
     
     time.sleep(1)
 # End of loop 

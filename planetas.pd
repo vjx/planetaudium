@@ -1,5 +1,5 @@
-#N canvas 352 87 570 512 10;
-#N canvas 73 55 632 544 R-Data 0;
+#N canvas 350 87 570 512 10;
+#N canvas 71 55 632 544 R-Data 0;
 #X obj 17 44 netreceive 3333;
 #X obj 15 482 route Dist-terra Fase Velocidade;
 #X floatatom 460 50 5 0 0 0 - - -, f 5;
@@ -58,7 +58,7 @@
 #X connect 27 5 24 0;
 #X connect 27 6 26 0;
 #X restore 36 35 pd R-Data;
-#N canvas 33 71 450 300 PLANETAS 1;
+#N canvas 33 72 450 300 PLANETAS 0;
 #N canvas 141 87 783 487 Mercurio 0;
 #X floatatom 90 173 12 0 0 0 - - -, f 12;
 #X obj 56 7 r Merc-Dist;
@@ -250,7 +250,7 @@
 #X obj 311 237 r Global-Kp-Cutoff;
 #X obj 260 91 atan;
 #X obj 471 294 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 12637 1;
+-1 -1 12646 1;
 #X obj 265 253 min 1;
 #X obj 262 179 - 0.575;
 #X obj 54 129 * 36;
@@ -288,13 +288,13 @@
 #X connect 31 0 21 2;
 #X restore 37 219 pd Jupiter;
 #X obj 37 200 tgl 15 0 empty Jupiter-Switch-Set empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 38 41 tgl 15 0 empty Mercury-Switch-Set empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 38 97 tgl 15 0 empty Venus-Switch-Set empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 237 33 tgl 15 0 empty Saturn-Switch-Set empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #N canvas 266 124 535 475 Saturn 0;
 #X floatatom 113 197 12 0 0 0 - - -, f 12;
 #X obj 13 278 osc~;
@@ -342,7 +342,7 @@
 #X obj 311 237 r Global-Kp-Cutoff;
 #X obj 260 91 atan;
 #X obj 471 294 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 12620 1;
+-1 -1 12644 1;
 #X obj 265 253 min 1;
 #X obj 262 179 - 0.575;
 #X obj 54 129 * 36;
@@ -384,12 +384,12 @@
 #X connect 30 0 31 0;
 #X restore 237 52 pd Saturn;
 #X obj 36 145 tgl 15 0 empty Mars-Switch-Set empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 236 82 tgl 15 0 empty Uanus-Switch-Set empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 236 158 Planet Neptune 28.9455 2.0033;
 #X obj 236 135 tgl 15 0 empty Neptune-Switch-Set empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 236 104 Planet Uranus 18.9511 2.01683;
 #X obj 35 166 Planet Marte 0.534778 2.05214;
 #X connect 3 0 2 0;
@@ -405,7 +405,7 @@
 #X obj 175 224 lop~ 1;
 #X obj 175 199 / 100;
 #X obj 159 249 *~;
-#N canvas 291 257 450 300 INIT 0;
+#N canvas 289 258 450 300 INIT 0;
 #X obj 153 128 loadbang;
 #X msg 153 150 \; Transpose-set 47 \; MasterSpeed-set 149 \; MainVol-set
 8 \; Global-Kp-Cutoff-Set 116 \; Jupiter-Switch-Set 1 \; Mercury-Switch-Set
@@ -413,7 +413,7 @@
 #X connect 0 0 1 0;
 #X restore 36 7 pd INIT;
 #X obj 175 179 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 7.2126 256;
+-262144 -1 -1 8 256;
 #X floatatom 294 176 0 0 120 0 - - -;
 #X text 335 176 level \, dB;
 #X floatatom 338 200 0 0 100 0 - - -;
@@ -423,16 +423,16 @@
 #X text 433 226 crossover frequency \, Hz.;
 #X text 459 251 HF damping \, percent;
 #X obj 265 39 vsl 15 128 0 20 0 0 empty MainVol-set empty 0 -9 0 10
--262144 -1 -1 4580 1;
+-262144 -1 -1 5080 1;
 #X obj 122 428 env~;
 #X obj 240 366 vsl 15 128 0 100 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8745 1;
-#N canvas 454 218 450 300 CONTROLS 0;
+-1 -1 0 1;
+#N canvas 450 220 450 300 CONTROLS 0;
 #X obj 15 53 s Transpose;
 #X obj 15 28 nbx 5 14 -1e+37 1e+37 0 0 empty Transpose-set empty 0
--8 0 10 -262144 -1 -1 43 256;
+-8 0 10 -262144 -1 -1 47 256;
 #X obj 21 123 nbx 5 14 -1e+37 1e+37 0 0 empty MasterSpeed-set empty
-0 -8 0 10 -262144 -1 -1 17 256;
+0 -8 0 10 -262144 -1 -1 149 256;
 #X obj 21 190 s MasterSpeed;
 #X obj 21 168 * 1e+07;
 #X obj 21 144 max 1;
@@ -459,7 +459,7 @@
 #X obj 162 323 cyclone/atan~;
 #X obj 397 118 mtof;
 #X obj 374 86 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 10400 1;
+-1 -1 0 1;
 #X obj 234 280 rev2~ 84 98 3000 20;
 #X obj 453 399 pow;
 #X floatatom 475 293 5 0 0 0 - - -, f 5;
